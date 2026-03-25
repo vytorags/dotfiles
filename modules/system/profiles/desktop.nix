@@ -11,7 +11,6 @@
     ../core/bluetooth.nix
     ../core/pipewire.nix
     ../core/waydroid.nix
-    ../core/nbfc.nix
     ../core/virt-manager.nix
     ../core/opentablet.nix
     ../core/gamemode.nix
@@ -56,6 +55,5 @@
       obsidian
       cowsay
       cmatrix
-      nbfc-linux
     ];
 }
