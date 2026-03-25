@@ -4,10 +4,10 @@
   unstable,
   lib,
   role ? "desktop",
+  isDesktop,
   ...
 }:
 let
-  isDesktop = role == "desktop";
   homeDir = config.home.homeDirectory;
 in
 {

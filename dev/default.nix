@@ -3,11 +3,9 @@
   unstable,
   mynvim,
   role ? "desktop",
+  isDesktop,
   ...
 }:
-let
-  isDesktop = role == "desktop";
-in
 {
   extraPackages =
     with pkgs;
@@ -30,7 +28,6 @@ in
     ]
     ++ pkgs.lib.optionals isDesktop [
       godot-mono
-      unstable.antigravity-fhs
       unstable.gemini-cli
       insomnia
       delta
@@ -41,6 +38,8 @@ in
       nodePackages.prettier
       clang-tools
       gcc
+    ] ++ pkgs.lib.optionals (!isDesktop) [
+      unstable.antigravity-fhs
     ];
 
   devShells = {

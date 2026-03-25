@@ -1,6 +1,7 @@
 {
   config,
   pkgs,
+  isDesktop,
   ...
 }:
 let
@@ -34,7 +35,7 @@ in
 
     targets = {
       gtk.enable = true;
-      gtk.flatpakSupport.enable = true;
+      gtk.flatpakSupport.enable = isDesktop;
       qt.enable = true;
       vscode.enable = false;
       cava.enable = false;

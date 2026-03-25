@@ -1,11 +1,9 @@
 {
   lib,
   role ? "desktop",
+  isDesktop,
   ...
 }:
-let
-  isDesktop = role == "desktop";
-in
 {
   imports = [
     ./niri

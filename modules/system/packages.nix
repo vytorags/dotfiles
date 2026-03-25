@@ -3,11 +3,9 @@
   unstable,
   lib,
   role ? "desktop",
+  isDesktop,
   ...
 }:
-let
-  isDesktop = role == "desktop";
-in
 {
   environment.systemPackages =
     with pkgs;

@@ -76,13 +76,14 @@
       };
 
       getDev =
-        role:
+        role: isDesktop:
         import ./dev {
           inherit
             pkgs
             unstable
             mynvim
             role
+            isDesktop
             ;
         };
 
@@ -90,15 +91,16 @@
         {
           role,
           hostName,
+          isDesktop,
         }:
         let
-          isDesktop = role == "desktop";
           dev = import ./dev {
             inherit
               pkgs
               unstable
               mynvim
               role
+              isDesktop
               ;
           };
 
@@ -160,8 +162,8 @@
 
       devShells."${system}" =
         let
-          desktopShells = (getDev "desktop").devShells;
-          serverShells = (getDev "server").devShells;
+          desktopShells = (getDev "desktop" true).devShells;
+          serverShells = (getDev "server" false).devShells;
         in
         desktopShells // serverShells;
     };

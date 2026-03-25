@@ -1,0 +1,4 @@
+{
+  role = "server";
+  isDesktop = false;
+}

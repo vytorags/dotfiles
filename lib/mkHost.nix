@@ -71,7 +71,7 @@ nixpkgs.lib.nixosSystem {
     inputs.mangowm.nixosModules.mango
     home-manager.nixosModules.home-manager
     (sharedHomeManager {
-      inherit role hostName;
+      inherit role hostName isDesktop;
     })
   ];
 }
