@@ -29,6 +29,11 @@
 
     niri-blur.url = "github:YaLTeR/niri?ref=wip/branch";
 
+    mangowm = {
+      url = "github:mangowm/mango";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
     noctalia = {
       url = "github:noctalia-dev/noctalia-shell";
       inputs.nixpkgs.follows = "nixpkgs-unstable";
@@ -36,11 +41,11 @@
 
     dms = {
       url = "github:AvengeMedia/DankMaterialShell";
-      inputs.nixpkgs.follows = "nixpkgs";
+      inputs.nixpkgs.follows = "nixpkgs-unstable";
     };
 
     quickshell = {
-      url = "git+https://git.outfoxxed.me/quickshell/quickshell";
+      url = "git+https://git.outfoxxed.me/outfoxxed/quickshell";
       inputs.nixpkgs.follows = "nixpkgs";
     };
   };
@@ -70,25 +75,6 @@
         config.allowUnfree = true;
       };
 
-      theme16 = {
-        base00 = "#1d2021";
-        base01 = "#282828";
-        base02 = "#3c3836";
-        base03 = "#504945";
-        base04 = "#bdae93";
-        base05 = "#d5c4a1";
-        base06 = "#ebdbb2";
-        base07 = "#fbf1c7";
-        base08 = "#d43847";
-        base09 = "#b82c3b";
-        base0A = "#e55f4f";
-        base0B = "#c32d3a";
-        base0C = "#dd434e";
-        base0D = "#9f2231";
-        base0E = "#c72f44";
-        base0F = "#7c1a27";
-      };
-
       getDev =
         role:
         import ./dev {
@@ -104,7 +90,6 @@
         {
           role,
           hostName,
-          theme16,
         }:
         let
           isDesktop = role == "desktop";
@@ -131,7 +116,6 @@
               role
               isDesktop
               hostName
-              theme16
               ;
           };
           home-manager.users.vitor = {
@@ -145,6 +129,7 @@
               inputs.stylix.homeModules.stylix
               noctalia.homeModules.default
               inputs.dms.homeModules.dank-material-shell
+              inputs.mangowm.hmModules.mango
             ]
             ++ lib.optional (builtins.pathExists hostHome) hostHome
             ++ [
@@ -163,7 +148,7 @@
           nur
           unstable
           sharedHomeManager
-          theme16
+          pkgs
           ;
       };
     in

@@ -1,5 +1,4 @@
 {
-  inputs,
   config,
   pkgs,
   unstable,
@@ -9,6 +8,7 @@
 }:
 let
   isDesktop = role == "desktop";
+  homeDir = config.home.homeDirectory;
 in
 {
   imports = [
@@ -42,6 +42,16 @@ in
             exec taskset -c 0-3 gamemoderun prismlauncher
           '';
         })
+        localsend
+        deskflow
+        sonobus
+        wf-recorder
+        gifski
+        grim
+        slurp
+        zbar
+        translate-shell
+        tesseract
       ]
       ++ lib.optionals isDesktop [
         unstable.gowall
@@ -52,6 +62,9 @@ in
         prismlauncher
         android-tools
         obs-studio
+        waydroid
+        ppsspp
+        protonvpn-gui
         (writeShellApplication {
           name = "scrolllock_keyboard";
           runtimeInputs = [
@@ -92,7 +105,6 @@ in
       WLR_DRM_NO_ATOMIC = 1;
       QT_QPA_PLATFORM = "wayland;xcb";
       NIXOS_OZONE_WL = "1";
-      XKB_DEFAULT_OPTIONS = "led:scroll";
     };
 
     file.".face".source = ../../assets/profile.png;
@@ -104,6 +116,25 @@ in
       createDirectories = true;
     };
   };
+
+  gtk = {
+    enable = true;
+    iconTheme = {
+      name = "Papirus-Dark";
+      package = pkgs.papirus-icon-theme;
+    };
+    gtk3.bookmarks = [
+      "file://${homeDir}/Documents"
+      "file://${homeDir}/Downloads"
+      "file://${homeDir}/Pictures"
+      "file://${homeDir}/Videos"
+      "file://${homeDir}/Music"
+      "file://${homeDir}/Workspace"
+      "file://${homeDir}/nixdots"
+    ];
+  };
+
+  qt.enable = true;
 
   nix.registry = {
     dev = {

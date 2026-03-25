@@ -17,14 +17,13 @@
     ./accountservice.nix
     ./pipewire.nix
     ./thermald.nix
+    ./waydroid.nix
+    ./nbfc.nix
   ]
   ++ lib.optionals isDesktop [
     ./opentablet.nix
     ./gamemode.nix
     ./flatpak.nix
     ./docker.nix
-  ]
-  ++ lib.optionals (!isDesktop) [
-    ./nbfc.nix
   ];
 }

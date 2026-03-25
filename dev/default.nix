@@ -30,7 +30,8 @@ in
     ]
     ++ pkgs.lib.optionals isDesktop [
       godot-mono
-      unstable.antigravity
+      unstable.antigravity-fhs
+      unstable.gemini-cli
       insomnia
       delta
       lazydocker
@@ -43,7 +44,7 @@ in
     ];
 
   devShells = {
-    php = pkgs.mkShell {
+    php = pkgs.mkShellNoCC {
       buildInputs = with pkgs; [
         php
         php.packages.composer
@@ -57,7 +58,7 @@ in
       ];
     };
 
-    go = pkgs.mkShell {
+    go = pkgs.mkShellNoCC {
       buildInputs = with pkgs; [
         go
         unstable.gopls
@@ -65,7 +66,7 @@ in
       ];
     };
 
-    rust = pkgs.mkShell {
+    rust = pkgs.mkShellNoCC {
       buildInputs = with pkgs; [
         cargo
         rustc
@@ -77,7 +78,7 @@ in
       ];
     };
 
-    node = pkgs.mkShell {
+    node = pkgs.mkShellNoCC {
       buildInputs = with pkgs; [
         nodejs
         bun
@@ -89,7 +90,7 @@ in
       ];
     };
 
-    python = pkgs.mkShell {
+    python = pkgs.mkShellNoCC {
       buildInputs = with pkgs; [
         python313
         black
@@ -98,7 +99,7 @@ in
       ];
     };
 
-    java = pkgs.mkShell {
+    java = pkgs.mkShellNoCC {
       buildInputs = with pkgs; [
         openjdk21
         jdt-language-server
@@ -106,7 +107,7 @@ in
       ];
     };
 
-    csharp = pkgs.mkShell {
+    csharp = pkgs.mkShellNoCC {
       buildInputs = with pkgs; [
         roslyn-ls
         dotnet-sdk_8
@@ -115,7 +116,7 @@ in
       ];
     };
 
-    C = pkgs.mkShell {
+    C = pkgs.mkShellNoCC {
       nativeBuildInputs = with pkgs; [
         stdenv.cc
         clang-tools
@@ -136,7 +137,7 @@ in
       '';
     };
 
-    flutter = pkgs.mkShell {
+    flutter = pkgs.mkShellNoCC {
       buildInputs = with pkgs; [
         flutter
         android-tools
@@ -144,7 +145,7 @@ in
       ];
     };
 
-    qml = pkgs.mkShell {
+    qml = pkgs.mkShellNoCC {
       buildInputs = with pkgs; [
         quickshell
         alejandra

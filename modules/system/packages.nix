@@ -61,6 +61,7 @@ in
       unstable.kdePackages.qt6ct
       unstable.kdePackages.qtmultimedia
       unstable.kdePackages.qtstyleplugin-kvantum
+      libei
     ]
     ++ lib.optionals isDesktop [
       obsidian

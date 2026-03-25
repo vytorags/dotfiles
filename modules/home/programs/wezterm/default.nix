@@ -95,7 +95,7 @@ in
        		mods = "ALT|SHIFT",
        		action = act.SplitPane({
        			direction = "Left",
-       			command = { args = { "copilot" } },
+       			command = { args = { "sh", "-c", "sleep 2; gemini" } },
        		}),
        	},
        	{

@@ -1,6 +1,12 @@
 { config, pkgs, ... }:
 {
   xdg.configFile."niri/config.kdl".text = with config.lib.stylix.colors; ''
+    output "HDMI-A-1" {
+      mode "1440x900@74.997"
+      scale 1
+      position x=0 y=0
+    }
+
     input {
       keyboard {
         xkb {
@@ -223,31 +229,32 @@
       XF86AudioRaiseVolume allow-when-locked=true { spawn "wpctl" "set-volume" "@DEFAULT_AUDIO_SINK@" "0.1+"; }
     }
 
-    blur {
-      passes 3
-      offset 2
-      noise 0
-    }
+    //blur {
+      //passes 3
+      //offset 2
+      //noise 0
+    //}
 
     layer-rule {
-      match namespace="^noctalia-overview*"
+      match namespace="noctalia-overview-.*$"
       place-within-backdrop true
     }
 
     layer-rule {
       match namespace="noctalia-background-.*$"
-      background-effect {
-        xray false
-      }
+      //background-effect {
+        //blur true
+        //xray false
+      //}
     }
 
     window-rule {
-      opacity 0.7
+      opacity 0.9
       draw-border-with-background false
 
-      background-effect {
-        blur true
-      }
+      //background-effect {
+        //blur true
+      //}
 
       focus-ring {
         width 2
@@ -284,6 +291,7 @@
       match app-id="chromium-browser"
       match app-id="edge"
       match app-id="brave-browser"
+      opacity 1.0
       open-maximized true
     }
 

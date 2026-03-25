@@ -1,15 +1,15 @@
 {
   config,
   pkgs,
-  theme16,
+  lib,
   ...
 }:
 let
   font = config.stylix.fonts.monospace;
   sddm-astronaut = pkgs.sddm-astronaut.override {
     embeddedTheme = "cyberpunk";
-    themeConfig = with theme16; {
-      Background = "${../../../assets/wallpapers/wallhaven_3zzlr9.jpg}";
+    themeConfig = with config.lib.stylix.colors.withHashtag; {
+      Background = "${../../../assets/wallpapers/wallhaven_md5mj9.jpg}";
       Font = "${font.name}";
       HeaderTextColor = "${base0E}";
       DateTextColor = "${base08}";
