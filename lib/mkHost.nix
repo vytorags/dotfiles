@@ -73,5 +73,6 @@ nixpkgs.lib.nixosSystem {
     (sharedHomeManager {
       inherit role hostName isDesktop;
     })
-  ] ++ nixpkgs.lib.optional (builtins.pathExists ../modules/system/profiles/${role}.nix) ../modules/system/profiles/${role}.nix;
+  ]
+  ++ nixpkgs.lib.optional (builtins.pathExists ../modules/system/profiles/${role}.nix) ../modules/system/profiles/${role}.nix;
 }

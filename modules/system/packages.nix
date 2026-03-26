@@ -7,29 +7,28 @@
   ...
 }:
 {
-  environment.systemPackages =
-    with pkgs;
-    [
-      tree
-      wget
-      git
-      unzip
-      unrar
-      ffmpeg
-      zip
-      brightnessctl
-      nixos-shell
-      docker-compose
-      docker
-      qemu
-      avahi
-      zsh
-      eza
-      home-manager
-      upower
-      exfatprogs
-      yt-dlp
-    ];
+  environment.systemPackages = with pkgs; [
+    tree
+    wget
+    git
+    unzip
+    unrar
+    ffmpeg
+    zip
+    brightnessctl
+    nixos-shell
+    docker-compose
+    docker
+    qemu
+    avahi
+    zsh
+    eza
+    home-manager
+    upower
+    exfatprogs
+    yt-dlp
+    dconf
+  ];
 
   fonts.packages = with pkgs; [
     font-awesome

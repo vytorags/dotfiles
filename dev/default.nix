@@ -38,7 +38,8 @@
       nodePackages.prettier
       clang-tools
       gcc
-    ] ++ pkgs.lib.optionals (!isDesktop) [
+    ]
+    ++ pkgs.lib.optionals (!isDesktop) [
       unstable.antigravity-fhs
     ];
 

@@ -19,13 +19,11 @@ in
     username = "vitor";
     homeDirectory = lib.mkForce "/home/vitor";
     stateVersion = "25.05";
-    packages =
-      with pkgs;
-      [
-        bc
-        usbutils
-        usbredir
-      ];
+    packages = with pkgs; [
+      bc
+      usbutils
+      usbredir
+    ];
 
     sessionVariables = {
       TERMINAL = "wezterm";

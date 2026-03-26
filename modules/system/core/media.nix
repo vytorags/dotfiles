@@ -5,7 +5,7 @@
     radarr.enable = true;
     sonarr.enable = true;
     prowlarr.enable = true;
-    
+
     transmission = {
       enable = true;
       settings = {
@@ -18,11 +18,11 @@
 
   # Open ports to allow local network access to WebbUIs and Torrent Peers
   networking.firewall.allowedTCPPorts = [
-    8096  # Jellyfin HTTP
-    7878  # Radarr HTTP
-    8989  # Sonarr HTTP
-    9696  # Prowlarr HTTP
-    9091  # Transmission RPC/WebUI
+    8096 # Jellyfin HTTP
+    7878 # Radarr HTTP
+    8989 # Sonarr HTTP
+    9696 # Prowlarr HTTP
+    9091 # Transmission RPC/WebUI
     51413 # Transmission Peer Port
   ];
 
