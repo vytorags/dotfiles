@@ -56,4 +56,6 @@
       cowsay
       cmatrix
     ];
+
+  services.tailscale.enable = true;
 }
