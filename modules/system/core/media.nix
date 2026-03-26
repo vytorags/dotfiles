@@ -5,6 +5,10 @@
     radarr.enable = true;
     sonarr.enable = true;
     prowlarr.enable = true;
+    bazarr = {
+      enable = true;
+      listenPort = 6767;
+    };
 
     transmission = {
       enable = true;
@@ -24,6 +28,7 @@
     9696 # Prowlarr HTTP
     9091 # Transmission RPC/WebUI
     51413 # Transmission Peer Port
+    6767 # Bazarr HTTP
   ];
 
   networking.firewall.allowedUDPPorts = [
