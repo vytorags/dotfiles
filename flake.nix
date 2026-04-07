@@ -44,8 +44,17 @@
       inputs.nixpkgs.follows = "nixpkgs-unstable";
     };
 
+    inir = {
+      url = "github:vytaro/iNir";
+    };
+
     quickshell = {
       url = "git+https://git.outfoxxed.me/outfoxxed/quickshell";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
+    agenix = {
+      url = "github:ryantm/agenix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
   };
@@ -59,11 +68,13 @@
       mynvim,
       noctalia,
       nur,
+      agenix,
       ...
     }@inputs:
     let
       lib = nixpkgs.lib;
       system = "x86_64-linux";
+      vars = import ./vars;
 
       unstable = import nixpkgs-unstable {
         inherit system;
@@ -118,14 +129,15 @@
               role
               isDesktop
               hostName
+              vars
               ;
           };
-          home-manager.users.vitor = {
+          home-manager.users.${vars.username} = {
             imports = [
-              ./modules/home/home.nix
+              ./home/home.nix
             ]
-            ++ lib.optional (builtins.pathExists ./modules/home/profiles/${role}.nix) ./modules/home/profiles/${role}.nix
-            ++ lib.optional (builtins.pathExists ./modules/home/profiles/${role}-packages.nix) ./modules/home/profiles/${role}-packages.nix
+            ++ lib.optional (builtins.pathExists ./home/profiles/${role}.nix) ./home/profiles/${role}.nix
+            ++ lib.optional (builtins.pathExists ./home/profiles/${role}-packages.nix) ./home/profiles/${role}-packages.nix
             ++ [
               inputs.niri-flake.homeModules.niri
               inputs.stylix.homeModules.stylix
@@ -151,6 +163,7 @@
           unstable
           sharedHomeManager
           pkgs
+          vars
           ;
       };
     in
