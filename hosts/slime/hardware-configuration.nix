@@ -24,7 +24,6 @@
     "sd_mod"
     "sr_mod"
     "sdhci_pci"
-    "nopat"
   ];
   boot.initrd.kernelModules = [ "i915" ];
   boot.kernelModules = [
