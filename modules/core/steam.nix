@@ -1,5 +1,5 @@
 {
-  programs.vesktop = {
+  programs.steam = {
     enable = true;
   };
 }

@@ -1,14 +1,14 @@
-{ config, pkgs, ... }:
+{ config, pkgs, vars, ... }:
 {
   programs.zsh.enable = true;
 
   users = {
     defaultUserShell = pkgs.zsh;
 
-    users.vitor = {
+    users.${vars.username} = {
       isNormalUser = true;
-      group = "vitor";
-      description = "Vitor";
+      group = "${vars.username}";
+      description = "${vars.fullName}";
       extraGroups = [
         "networkmanager"
         "wheel"
@@ -22,6 +22,6 @@
       ignoreShellProgramCheck = true;
     };
 
-    groups.vitor = {};
+    groups.${vars.username} = {};
   };
 }

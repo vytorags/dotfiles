@@ -5,17 +5,18 @@
 }:
 {
   imports = [
-    ../core/sddm.nix
-    ../core/niri.nix
-    ../core/portals.nix
-    ../core/bluetooth.nix
-    ../core/pipewire.nix
-    ../core/waydroid.nix
-    ../core/virt-manager.nix
-    ../core/opentablet.nix
-    ../core/gamemode.nix
-    ../core/flatpak.nix
-    ../core/docker.nix
+    ../../core/sddm.nix
+    ../../core/niri.nix
+    ../../core/portals.nix
+    ../../core/bluetooth.nix
+    ../../core/pipewire.nix
+    ../../core/waydroid.nix
+    ../../core/virt-manager.nix
+    ../../core/opentablet.nix
+    ../../core/gamemode.nix
+    ../../core/flatpak.nix
+    ../../core/docker.nix
+    ../../core/steam.nix
   ];
 
   environment.systemPackages = with pkgs; [

@@ -9,7 +9,7 @@ let
   sddm-astronaut = pkgs.sddm-astronaut.override {
     embeddedTheme = "cyberpunk";
     themeConfig = with config.lib.stylix.colors.withHashtag; {
-      Background = "${../../../assets/wallpapers/wallhaven_md5mj9.jpg}";
+      Background = "${../../assets/wallpapers/wallhaven_md5mj9.jpg}";
       Font = "${font.name}";
       HeaderTextColor = "${base0E}";
       DateTextColor = "${base08}";
