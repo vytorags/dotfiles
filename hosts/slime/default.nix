@@ -3,6 +3,7 @@
   imports = [
     ../common
     ./hardware-configuration.nix
+    ../../hardening
     ../../infra
   ];
 
