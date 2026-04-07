@@ -2,7 +2,11 @@
 {
   networking.firewall = {
     enable = true;
-    allowedTCPPorts = [ ];
+    allowedTCPPorts = [
+      22
+      80
+      443
+    ];
     allowedUDPPorts = [ ];
     trustedInterfaces = [
       "lo"
