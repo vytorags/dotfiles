@@ -12,7 +12,7 @@
 {
   imports = [
     (modulesPath + "/installer/scan/not-detected.nix")
-    ../../modules/system/profiles/gpu/intel.nix
+    ../../modules/profiles/gpu/intel.nix
   ];
 
   boot.initrd.availableKernelModules = [

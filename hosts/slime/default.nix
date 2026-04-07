@@ -3,7 +3,7 @@
   imports = [
     ../common
     ./hardware-configuration.nix
-    ../../modules/system/profiles/homelab.nix
+    ../../infra
   ];
 
   networking.hostName = "slime";

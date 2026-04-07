@@ -3,6 +3,7 @@
   imports = [
     ../common
     ./hardware-configuration.nix
+    ../../modules/profiles/desktop
   ];
 
   networking.hostName = "gh0stk";

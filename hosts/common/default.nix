@@ -3,7 +3,8 @@
 { ... }:
 {
   imports = [
-    ../../modules/system/configuration.nix
+    ../../modules/configuration.nix
+    ../../secrets
   ];
 }
 

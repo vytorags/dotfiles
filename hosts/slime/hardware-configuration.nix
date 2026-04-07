@@ -12,7 +12,7 @@
 {
   imports = [
     (modulesPath + "/installer/scan/not-detected.nix")
-    ../../modules/system/profiles/gpu/intel.nix
+    ../../modules/profiles/gpu/intel.nix
   ];
 
   boot.initrd.availableKernelModules = [
@@ -38,6 +38,7 @@
     "i915.enable_guc=2"
     "intel_iommu=on"
     "intel_pstate=disable"
+    "nopat"
   ];
   boot.extraModulePackages = [ ];
   boot.extraModprobeConfig = ''
