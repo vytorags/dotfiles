@@ -8,6 +8,7 @@
   sharedHomeManager,
   unstable,
   pkgs,
+  vars,
 }:
 name:
 let
@@ -27,6 +28,7 @@ nixpkgs.lib.nixosSystem {
       role
       isDesktop
       hostName
+      vars
       ;
   };
   modules = [
@@ -69,10 +71,14 @@ nixpkgs.lib.nixosSystem {
     }
     inputs.nix-flatpak.nixosModules.nix-flatpak
     inputs.mangowm.nixosModules.mango
+    inputs.agenix.nixosModules.default
+  ]
+  ++ nixpkgs.lib.optionals isDesktop [
     home-manager.nixosModules.home-manager
     (sharedHomeManager {
       inherit role hostName isDesktop;
     })
   ]
-  ++ nixpkgs.lib.optional (builtins.pathExists ../modules/system/profiles/${role}.nix) ../modules/system/profiles/${role}.nix;
+  ++ nixpkgs.lib.optional (builtins.pathExists ../modules/profiles/${role}.nix) ../modules/profiles/${role}.nix
+  ++ nixpkgs.lib.optional (builtins.pathExists ../modules/profiles/${role}/default.nix) ../modules/profiles/${role};
 }
