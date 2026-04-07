@@ -10,9 +10,7 @@
   extraPackages =
     with pkgs;
     [
-      vscode-fhs
       mynvim.packages.${stdenv.hostPlatform.system}.nvim
-      gh
       fd
       jq
       ripgrep
@@ -28,6 +26,7 @@
     ]
     ++ pkgs.lib.optionals isDesktop [
       godot-mono
+      vscode-fhs
       unstable.gemini-cli
       insomnia
       delta
@@ -38,9 +37,6 @@
       nodePackages.prettier
       clang-tools
       gcc
-    ]
-    ++ pkgs.lib.optionals (!isDesktop) [
-      unstable.antigravity-fhs
     ];
 
   devShells = {
@@ -52,6 +48,9 @@
         nodePackages.intelephense
         (callPackage ../pkgs/php-cs-fixer/package.nix { })
         tailwindcss-language-server
+        vtsls
+        nodePackages.vscode-langservers-extracted
+        nodePackages.eslint
         phpactor
         php.packages.php-codesniffer
         nodePackages.browser-sync
@@ -104,6 +103,7 @@
         openjdk21
         jdt-language-server
         maven
+        gradle
       ];
     };
 
