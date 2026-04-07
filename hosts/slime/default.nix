@@ -29,10 +29,12 @@
 
   services.getty.autologinUser = "vitor";
   services.logind = {
-    Login = {
-      HandleLidSwitch = "ignore";
-      HandleLidSwitchExternalPower = "ignore";
-      HandleLidSwitchDocked = "ignore";
+    settings = {
+      Login = {
+        HandleLidSwitch = "ignore";
+        HandleLidSwitchExternalPower = "ignore";
+        HandleLidSwitchDocked = "ignore";
+      };
     };
   };
 }
