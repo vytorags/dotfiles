@@ -229,12 +229,6 @@
       XF86AudioRaiseVolume allow-when-locked=true { spawn "wpctl" "set-volume" "@DEFAULT_AUDIO_SINK@" "0.1+"; }
     }
 
-    blur {
-      passes 2
-      offset 3
-      noise 0
-    }
-
     layer-rule {
       match namespace="^noctalia-overview*"
       place-within-backdrop true
@@ -242,19 +236,10 @@
 
     layer-rule {
       match namespace="^noctalia-background*"
-      opacity 0.8
-      background-effect {
-        blur true
-      }
     }
 
     window-rule {
-      opacity 0.8
       draw-border-with-background false
-
-      background-effect {
-        blur true
-      }
 
       focus-ring {
         width 2
