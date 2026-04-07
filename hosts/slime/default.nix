@@ -29,8 +29,10 @@
 
   services.getty.autologinUser = "vitor";
   services.logind = {
-    lidSwitch = "ignore";
-    lidSwitchExternalPower = "ignore";
-    lidSwitchDocked = "ignore";
+    settings = {
+      lidSwitch = "ignore";
+      lidSwitchExternalPower = "ignore";
+      lidSwitchDocked = "ignore";
+    };
   };
 }
