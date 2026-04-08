@@ -2,8 +2,8 @@
   pkgs,
   unstable,
   lib,
-  role ? "desktop",
   isDesktop,
+  mynvim,
   ...
 }:
 let
@@ -32,13 +32,25 @@ let
     yt-dlp
     dconf
   ];
+
+  serverPackages = with pkgs; [
+    cloudflared
+    caddy
+    htop
+  ];
 in
 {
-  environment.systemPackages = corePackages ++ lib.optionals isDesktop desktopPackages;
+  environment.systemPackages =
+    corePackages
+    ++ lib.optionals isDesktop desktopPackages
+    ++ lib.optionals (!isDesktop) serverPackages;
 
-  fonts.packages = lib.optionals isDesktop (with pkgs; [
-    font-awesome
-    nerd-fonts.victor-mono
-    material-symbols
-  ]);
+  fonts.packages = lib.optionals isDesktop (
+    with pkgs;
+    [
+      font-awesome
+      nerd-fonts.victor-mono
+      material-symbols
+    ]
+  );
 }
