@@ -36,6 +36,7 @@ let
   serverPackages = with pkgs; [
     cloudflared
     caddy
+    nbfc-linux
     htop
   ];
 in
