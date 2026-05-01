@@ -52,6 +52,7 @@ in
       font-awesome
       nerd-fonts.victor-mono
       material-symbols
+      (callPackage ../pkgs/sarasa-gothic-nf/package.nix { })
     ]
   );
 }

@@ -2,6 +2,7 @@
   config,
   pkgs,
   unstable,
+  inputs,
   ...
 }:
 let
@@ -17,6 +18,7 @@ in
     ../programs/cava
     ../programs/lazygit
     ../programs/vesktop
+    ../programs/rclone
   ];
 
   home.packages = with pkgs; [
@@ -26,6 +28,9 @@ in
     qimgv
     gpu-screen-recorder
     prismlauncher
+    swww
+    inputs.quickshell.packages."${pkgs.stdenv.hostPlatform.system}".default
+    kdePackages.qt5compat
     (writeShellApplication {
       name = "minecraft";
       runtimeInputs = [

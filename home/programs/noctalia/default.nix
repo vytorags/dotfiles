@@ -8,6 +8,7 @@
 let
   homeDir = config.home.homeDirectory;
   font = config.stylix.fonts.monospace;
+
 in
 {
   imports = [

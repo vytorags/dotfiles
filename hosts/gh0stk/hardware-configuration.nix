@@ -31,6 +31,7 @@
     "i915.fastboot=1"
     "video=SVIDEO-1:d"
     "snd_hda_intel.model=auto"
+    "libata.noacpi=1"
   ];
 
   fileSystems."/boot" = {
@@ -45,6 +46,11 @@
   fileSystems."/" = {
     device = "/dev/disk/by-label/nixos";
     fsType = "btrfs";
+    options = [
+      "compress=zstd:1"
+      "noatime"
+      "discard=async"
+    ];
   };
 
   swapDevices = [

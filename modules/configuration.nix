@@ -42,6 +42,10 @@
         from = 24800;
         to = 24800;
       }
+      {
+        from = 53317;
+        to = 53317;
+      }
     ];
     allowedUDPPortRanges = allowedTCPPortRanges;
   };
@@ -83,7 +87,7 @@
   };
 
   services.udev.extraRules = ''
-    ACTION=="add", SUBSYSTEM=="block", KERNEL=="sd[a-z]", ATTR{queue/rotational}=="0", ATTR{queue/scheduler}="kyber"
+    ACTION=="add|change", KERNEL=="sd[a-z]*", ATTR{queue/rotational}=="0", ATTR{queue/scheduler}="bfq"
     ACTION=="add", SUBSYSTEM=="leds", KERNEL=="*::scrolllock", RUN+="/bin/sh -c 'chmod 666 /sys/class/leds/%k/brightness /sys/class/leds/%k/trigger'"
   '';
 

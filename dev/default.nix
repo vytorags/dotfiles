@@ -23,11 +23,16 @@
       gnumake
       shfmt
       lazygit
+      dbeaver-bin
     ]
     ++ pkgs.lib.optionals isDesktop [
       godot-mono
       vscode-fhs
       unstable.gemini-cli
+      unstable.github-copilot-cli
+      unstable.antigravity
+      (callPackage ../pkgs/opencode/package.nix { })
+      # unstable.opencode
       insomnia
       delta
       lazydocker
@@ -35,6 +40,9 @@
       lua-language-server
       stylua
       nodePackages.prettier
+      pnpm
+      (callPackage ../pkgs/php-cs-fixer/package.nix { })
+      (callPackage ../pkgs/laravel-pint/package.nix { })
       clang-tools
       gcc
     ];

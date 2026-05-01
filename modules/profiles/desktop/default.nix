@@ -25,12 +25,9 @@
     (brave.override {
       commandLineArgs = [
         "--password-store=gnome"
+        "--ozone-platform=wayland"
+        "--enable-features=UseOzonePlatform"
         "--enable-features=VaapiVideoDecoder"
-        "--disable-features=Vp9Decoder,Av1Decoder,WebRtcAllowInputVolumeAdjustment"
-        "--use-gl=egl"
-        "--ignore-gpu-blocklist"
-        "--disable-gpu-rasterization"
-        "--disable-oop-rasterization"
         "--enable-features=BatterySaverModeAvailable"
       ];
     })
@@ -47,6 +44,8 @@
     pavucontrol
     unstable.libsForQt5.qtstyleplugins
     unstable.libsForQt5.qt5ct
+    unstable.libsForQt5.qt5.qtgraphicaleffects
+    kdePackages.qt5compat
     unstable.kdePackages.qt6ct
     unstable.kdePackages.qtmultimedia
     unstable.kdePackages.qtstyleplugin-kvantum

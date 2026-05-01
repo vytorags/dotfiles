@@ -7,5 +7,8 @@
     ./zram.nix
     ./accountservice.nix
     ./thermald.nix
+    ./ccache.nix
+    ./ananicy.nix
+    ./scx.nix
   ];
 }

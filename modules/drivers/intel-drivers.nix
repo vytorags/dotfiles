@@ -18,9 +18,7 @@ in
     hardware.graphics = {
       enable = true;
       extraPackages = with pkgs; [
-        vpl-gpu-rt
         libvdpau-va-gl
-        intel-media-driver
         intel-vaapi-driver
         mesa
         libglvnd
@@ -30,7 +28,7 @@ in
     };
 
     environment.variables = {
-      LIBVA_DRIVER_NAME = "iHD";
+      LIBVA_DRIVER_NAME = "i965";
       VDPAU_DRIVER = "va_gl";
     };
   };

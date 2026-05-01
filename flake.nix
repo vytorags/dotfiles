@@ -11,7 +11,7 @@
 
     nixpkgs-unstable.url = "github:nixos/nixpkgs/nixpkgs-unstable";
 
-    mynvim.url = "github:viitorags/nvim";
+    mynvim.url = "github:vytorags/nvim_dots";
 
     stylix.url = "github:nix-community/stylix";
 
@@ -27,7 +27,7 @@
 
     nix-flatpak.url = "github:gmodena/nix-flatpak/?ref=v0.6.0";
 
-    niri-blur.url = "github:YaLTeR/niri?ref=wip/branch";
+    niri.url = "github:YaLTeR/niri";
 
     mangowm = {
       url = "github:mangowm/mango";

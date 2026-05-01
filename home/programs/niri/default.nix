@@ -33,7 +33,7 @@
     prefer-no-csd
 
     layout {
-      gaps 4
+      gaps 12
 
       center-focused-column "never"
 
@@ -55,11 +55,10 @@
         inactive-color "#505050"
 
         urgent-color "#9b0000"
-
       }
 
       shadow {
-        softness 30
+        softness 20
 
         spread 5
 
@@ -113,7 +112,7 @@
       Mod+Return { spawn "wezterm" "start"; }
       Mod+A { spawn "noctalia-shell" "ipc" "call" "launcher" "toggle"; }
       Mod+V { spawn "noctalia-shell" "ipc" "call" "launcher" "clipboard"; }
-      Mod+W { spawn "noctalia-shell" "ipc" "call" "wallpaper" "toggle"; }
+      Mod+W { spawn "noctalia-shell" "ipc" "call" "plugin:wallcards" "toggle"; }
       Mod+P { spawn "noctalia-shell" "ipc" "call" "sessionMenu" "toggle"; }
       Scroll_Lock { spawn "scrolllock_keyboard"; }
       Mod+E { spawn "wezterm" "start" "--" "yazi"; }
@@ -239,6 +238,7 @@
     }
 
     window-rule {
+      opacity 0.9
       draw-border-with-background false
 
       focus-ring {
@@ -247,10 +247,9 @@
         inactive-color "#505050"
       }
 
-      geometry-corner-radius 15
+      geometry-corner-radius 20
       clip-to-geometry true
     }
-
 
     window-rule {
       match is-floating=true
