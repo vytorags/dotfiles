@@ -107,7 +107,7 @@ This configuration uses `lazy.nvim` to manage its plugins. The plugins are impor
 
 ## Screenshot
 
-![Preview Image](../../Assets/Previews/Home.png)
+![Preview Image](../../Assets/Previews/Neovim.png)
 
 ---
 
