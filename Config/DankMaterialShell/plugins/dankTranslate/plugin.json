@@ -1,0 +1,20 @@
+{
+    "id": "dankTranslate",
+    "name": "Translate",
+    "description": "Translate text between languages using translate-shell",
+    "version": "0.1.1",
+    "author": "alcxyz",
+    "icon": "translate",
+    "type": "launcher",
+    "capabilities": ["launcher"],
+    "component": "./DankTranslate.qml",
+    "settings": "./DankTranslateSettings.qml",
+    "trigger": ">",
+    "requires_dms": ">=1.4.0",
+    "requires": ["trans", "wl-copy"],
+    "permissions": [
+        "settings_read",
+        "settings_write",
+        "process"
+    ]
+}

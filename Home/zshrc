@@ -1,0 +1,23 @@
+export ZSH="$HOME/.oh-my-zsh"
+export EDITOR="nvim"
+export TERMINAL="wezterm"
+export PATH="/home/vitor/.bun/bin:$PATH"
+export PATH="$HOME/.local/bin:$PATH"
+
+ZSH_THEME="gnzh"
+
+ENABLE_CORRECTION="true"
+
+plugins=(
+    git
+    zsh-autosuggestions
+    zsh-syntax-highlighting
+    zsh-history-substring-search
+)
+
+source $ZSH/oh-my-zsh.sh
+
+alias l="eza -lh --icons=auto"
+alias ls="eza -ha --icons=auto --sort=name --group-directories-first"
+alias ff="fastfetch"
+alias btw="cowsay 'I Use Fedora BTW'"

@@ -1,0 +1,63 @@
+{
+  "wallpaperDiscovery": {
+    "enabled": true,
+    "downloadLocation": "~/Pictures/Wallpapers"
+  },
+  "dankPomodoroTimer": {
+    "enabled": true,
+    "autoSetDND": false
+  },
+  "nixMonitor": {
+    "enabled": true,
+    "nixpkgsChannel": "nixos-unstable"
+  },
+  "developerUtilities": {
+    "enabled": true
+  },
+  "dockerManager": {
+    "enabled": true
+  },
+  "commandRunner": {
+    "enabled": true,
+    "history": [
+      "Prs",
+      "ds",
+      "Fis",
+      "minecraft",
+      "cmd minecraft",
+      "cmd"
+    ]
+  },
+  "linuxWallpaperEngine": {
+    "enabled": true,
+    "playlistIntervalMinutes": 1,
+    "playlistShuffle": false
+  },
+  "screenRecorder": {
+    "enabled": true
+  },
+  "screenToolkit": {
+    "enabled": true
+  },
+  "wallpaperCarousel": {
+    "enabled": true,
+    "carouselMode": "standard",
+    "itemWidth": 300,
+    "expandSelected": "true",
+    "selectedScale": 108,
+    "holdExpandRatio": 35,
+    "overlayOpacity": 0
+  },
+  "adguardVPplugin": {
+    "enabled": true
+  },
+  "polyglot": {
+    "enabled": true
+  },
+  "sathiAi": {
+    "enabled": true
+  },
+  "dankTranslate": {
+    "enabled": true
+  }
+}

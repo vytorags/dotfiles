@@ -1,0 +1,6 @@
+g3tchoo/prismlauncher
+avengemedia/dms
+zhangyi6324/noctalia-shell
+wezfurlong/wezterm-nightly
+avengemedia/danklinux
+yalter/niri

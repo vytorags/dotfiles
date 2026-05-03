@@ -1,0 +1,12 @@
+niri
+DankMaterialShell
+nvim
+wezterm
+yazi
+sioyek
+qt6ct
+qt5ct
+gtk-3.0
+gtk-4.0
+lazygit
+fastfetch

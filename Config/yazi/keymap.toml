@@ -1,0 +1,31 @@
+[[mgr.prepend_keymap]]
+on = "M"
+run = "plugin mount"
+
+[[mgr.prepend_keymap]]
+on = "L"
+run = "lazygit"
+
+[[mgr.prepend_keymap]]
+desc = "Diff the selected with the hovered file"
+on = ["P", "p"]
+run = "plugin diff"
+
+[[mgr.prepend_keymap]]
+desc = "Compress with ouch"
+on = ["C"]
+run = "plugin ouch"
+
+[[mgr.prepend_keymap]]
+on = "<C-n>"
+run = "shell 'ripdrag \"$@\" -x 2>/dev/null &' --confirm"
+
+[[mgr.prepend_keymap]]
+desc = "Move selected items"
+on = "m"
+run = "shell 'shell \"$@\"' --confirm"
+
+[[mgr.prepend_keymap]]
+desc = "Send selected files via KDE Connect"
+on = "<C-s>"
+run = "plugin kdeconnect-send"

@@ -1,0 +1,8 @@
+# Editor / OS
+*.swp
+*~
+.DS_Store
+Thumbs.db
+
+# Local config (si alguien enlaza aquí)
+*.local

@@ -1,0 +1,12 @@
+{
+  "id": "polyglot",
+  "name": "Polyglot",
+  "description": "A WIP translation plugin. Currently supports DeepL's free API.",
+  "version": "0.1.1",
+  "author": "Silzinc",
+  "icon": "translate",
+  "type": "widget",
+  "component": "./Widget.qml",
+  "settings": "./Settings.qml",
+  "permissions": ["settings_read", "settings_write", "process", "network"]
+}

@@ -1,0 +1,251 @@
+[completion.active]
+bg = "#665c54"
+fg = "#b16286"
+
+[completion.border]
+fg = "#458588"
+
+[completion.inactive]
+fg = "#ebdbb2"
+
+[[filetype.rules]]
+fg = "#689d6a"
+mime = "image/*"
+
+[[filetype.rules]]
+fg = "#d79921"
+mime = "video/*"
+
+[[filetype.rules]]
+fg = "#d79921"
+mime = "audio/*"
+
+[[filetype.rules]]
+fg = "#b16286"
+mime = "application/zip"
+
+[[filetype.rules]]
+fg = "#b16286"
+mime = "application/gzip"
+
+[[filetype.rules]]
+fg = "#b16286"
+mime = "application/tar"
+
+[[filetype.rules]]
+fg = "#b16286"
+mime = "application/bzip"
+
+[[filetype.rules]]
+fg = "#b16286"
+mime = "application/bzip2"
+
+[[filetype.rules]]
+fg = "#b16286"
+mime = "application/7z-compressed"
+
+[[filetype.rules]]
+fg = "#b16286"
+mime = "application/rar"
+
+[[filetype.rules]]
+fg = "#b16286"
+mime = "application/xz"
+
+[[filetype.rules]]
+fg = "#98971a"
+mime = "application/doc"
+
+[[filetype.rules]]
+fg = "#98971a"
+mime = "application/pdf"
+
+[[filetype.rules]]
+fg = "#98971a"
+mime = "application/rtf"
+
+[[filetype.rules]]
+fg = "#98971a"
+mime = "application/vnd.*"
+
+[[filetype.rules]]
+bold = true
+fg = "#458588"
+url = "*/"
+
+[[filetype.rules]]
+fg = "#ebdbb2"
+mime = "*"
+
+[help.desc]
+fg = "#ebdbb2"
+
+[help.footer]
+fg = "#ebdbb2"
+
+[help.hovered]
+bg = "#665c54"
+fg = "#ebdbb2"
+
+[help.on]
+fg = "#b16286"
+
+[help.run]
+fg = "#689d6a"
+
+[indicator.current]
+bg = "#504945"
+bold = true
+
+[indicator.preview]
+bg = "#504945"
+bold = true
+
+[input.border]
+fg = "#458588"
+
+[input.selected]
+bg = "#665c54"
+
+[input.title]
+fg = "#ebdbb2"
+
+[input.value]
+fg = "#ebdbb2"
+
+[mgr]
+syntect_theme = "/nix/store/r15r04kl8y1736krivaf4vzgyxw40pws-base16-gruvbox-dark.tmTheme"
+
+[mgr.border_style]
+fg = "#928374"
+
+[mgr.count_copied]
+bg = "#98971a"
+fg = "#282828"
+
+[mgr.count_cut]
+bg = "#cc241d"
+fg = "#282828"
+
+[mgr.count_selected]
+bg = "#d79921"
+fg = "#282828"
+
+[mgr.cwd]
+fg = "#689d6a"
+
+[mgr.find_keyword]
+bold = true
+fg = "#98971a"
+
+[mgr.find_position]
+fg = "#b16286"
+
+[mgr.marker_copied]
+bg = "#98971a"
+fg = "#98971a"
+
+[mgr.marker_cut]
+bg = "#cc241d"
+fg = "#cc241d"
+
+[mgr.marker_selected]
+bg = "#d79921"
+fg = "#d79921"
+
+[mode.normal_alt]
+bg = "#282828"
+fg = "#458588"
+
+[mode.normal_main]
+bg = "#458588"
+bold = true
+fg = "#282828"
+
+[mode.select_alt]
+bg = "#282828"
+fg = "#98971a"
+
+[mode.select_main]
+bg = "#98971a"
+bold = true
+fg = "#282828"
+
+[mode.unset_alt]
+bg = "#282828"
+fg = "#9d0006"
+
+[mode.unset_main]
+bg = "#9d0006"
+bold = true
+fg = "#282828"
+
+[pick.active]
+fg = "#b16286"
+
+[pick.border]
+fg = "#458588"
+
+[pick.inactive]
+fg = "#ebdbb2"
+
+[status.perm_exec]
+fg = "#98971a"
+
+[status.perm_read]
+fg = "#d79921"
+
+[status.perm_sep]
+fg = "#689d6a"
+
+[status.perm_type]
+fg = "#458588"
+
+[status.perm_write]
+fg = "#cc241d"
+
+[status.progress_error]
+bg = "#282828"
+fg = "#cc241d"
+
+[status.progress_label]
+bg = "#282828"
+fg = "#ebdbb2"
+
+[status.progress_normal]
+bg = "#282828"
+fg = "#ebdbb2"
+
+[tabs.active]
+bg = "#458588"
+bold = true
+fg = "#282828"
+
+[tabs.inactive]
+bg = "#3c3836"
+fg = "#458588"
+
+[tasks.border]
+fg = "#458588"
+
+[tasks.hovered]
+bg = "#665c54"
+fg = "#ebdbb2"
+
+[tasks.title]
+fg = "#ebdbb2"
+
+[which.cand]
+fg = "#689d6a"
+
+[which.desc]
+fg = "#ebdbb2"
+
+[which.mask]
+bg = "#504945"
+
+[which.rest]
+fg = "#9d0006"
+
+[which.separator_style]
+fg = "#928374"

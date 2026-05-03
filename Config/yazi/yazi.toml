@@ -1,0 +1,226 @@
+enable_mouse_support = true
+ratio = [1, 2, 4]
+
+[log]
+enabled = false
+
+[mgr]
+sort_dir_first = true
+sort_reverse = true
+
+[[open.prepend_rules]]
+name = "*.pdf"
+use = "pdf"
+
+[[open.prepend_rules]]
+name = "*.jpg"
+use = "img"
+
+[[open.prepend_rules]]
+name = "*.png"
+use = "img"
+
+[[open.prepend_rules]]
+name = "*.gif"
+use = "img"
+
+[[open.prepend_rules]]
+name = "*.bmp"
+use = "img"
+
+[[open.prepend_rules]]
+name = "*.svg"
+use = "img"
+
+[[open.prepend_rules]]
+name = "*.ico"
+use = "img"
+
+[[open.prepend_rules]]
+name = "*.heic"
+use = "img"
+
+[[open.prepend_rules]]
+name = "*.jpeg"
+use = "img"
+
+[[open.prepend_rules]]
+name = "*.tiff"
+use = "img"
+
+[[open.prepend_rules]]
+name = "*.webp"
+use = "img"
+
+[[open.prepend_rules]]
+name = "*.mp4"
+use = "mpv"
+
+[[open.prepend_rules]]
+name = "*.zip"
+use = "ark"
+
+[[open.prepend_rules]]
+name = "*.tar"
+use = "ark"
+
+[[open.prepend_rules]]
+name = "*.gz"
+use = "ark"
+
+[[open.prepend_rules]]
+name = "*.bz2"
+use = "ark"
+
+[[open.prepend_rules]]
+name = "*.xz"
+use = "ark"
+
+[[open.prepend_rules]]
+name = "*.7z"
+use = "ark"
+
+[[open.prepend_rules]]
+name = "*.rar"
+use = "ark"
+
+[[open.prepend_rules]]
+name = "*.tar.gz"
+use = "ark"
+
+[[open.prepend_rules]]
+name = "*.tgz"
+use = "ark"
+
+[[open.prepend_rules]]
+name = "*.tar.bz2"
+use = "ark"
+
+[[open.prepend_rules]]
+name = "*.tbz2"
+use = "ark"
+
+[[open.prepend_rules]]
+name = "*.tar.xz"
+use = "ark"
+
+[[open.prepend_rules]]
+name = "*.txz"
+use = "ark"
+
+[[open.prepend_rules]]
+name = "*.lz"
+use = "ark"
+
+[[open.prepend_rules]]
+name = "*.lzma"
+use = "ark"
+
+[[open.prepend_rules]]
+name = "*.zst"
+use = "ark"
+
+[[open.prepend_rules]]
+name = "*.zstd"
+use = "ark"
+
+[[open.prepend_rules]]
+name = "*.cab"
+use = "ark"
+
+[[open.prepend_rules]]
+name = "*.iso"
+use = "ark"
+
+[[open.prepend_rules]]
+name = "*.apk"
+use = "ark"
+
+[[open.prepend_rules]]
+name = "*.jar"
+use = "ark"
+
+[[opener.EDITOR]]
+desc = "Run EDITOR"
+run = "nvim \"$@\""
+
+[[opener.ark]]
+for = "unix"
+orphan = true
+run = "ark \"$@\" "
+
+[[opener.edit]]
+block = true
+for = "unix"
+run = "nvim \"$@\" "
+
+[[opener.extract]]
+desc = "Extract here with ouch"
+for = "unix"
+run = "ouch d -y \"$@\" "
+
+[[opener.img]]
+for = "unix"
+orphan = true
+run = "qimgv \"$@\" "
+
+[[opener.mpv]]
+for = "unix"
+orphan = true
+run = "mpv \"$@\" "
+
+[[opener.pdf]]
+for = "unix"
+orphan = true
+run = "sioyek \"$@\" "
+
+[[plugin.prepend_fetchers]]
+id = "git"
+name = "*"
+run = "git"
+
+[[plugin.prepend_fetchers]]
+id = "git"
+name = "/"
+run = "git"
+
+[[plugin.prepend_previewers]]
+mime = "application/*zip"
+run = "ouch"
+
+[[plugin.prepend_previewers]]
+mime = "application/x-tar"
+run = "ouch"
+
+[[plugin.prepend_previewers]]
+mime = "application/x-bzip2"
+run = "ouch"
+
+[[plugin.prepend_previewers]]
+mime = "application/x-7z-compressed"
+run = "ouch"
+
+[[plugin.prepend_previewers]]
+mime = "application/x-rar"
+run = "ouch"
+
+[[plugin.prepend_previewers]]
+mime = "application/x-xz"
+run = "ouch"
+
+[[plugin.prepend_previewers]]
+mime = "application/xz"
+run = "ouch"
+
+[[plugin.prepend_previewers]]
+name = "*.md"
+run = "glow"
+
+[preview]
+image_filter = "ueberzug"
+image_quality = 90
+max_height = 760
+max_width = 1366
+tab_size = 4
+ueberzug_offset = [0, 0, 0, 0]
+ueberzug_scale = 1

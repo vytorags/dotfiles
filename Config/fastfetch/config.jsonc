@@ -1,0 +1,63 @@
+{
+	"display": {
+		"separator": " "
+	},
+	"logo": {
+		"height": 10,
+		"width": 26,
+		"padding": {
+			"right": 4
+		},
+		"source": "/home/vitor/.config/fastfetch/images/image.png",
+		"type": "iterm"
+	},
+	"modules": [
+		{
+			"keyWidth": 10,
+			"type": "title"
+		},
+		"break",
+		{
+			"key": " ",
+			"keyColor": "33",
+			"type": "os"
+		},
+		{
+			"key": " ",
+			"keyColor": "33",
+			"type": "kernel"
+		},
+		{
+			"key": " ",
+			"keyColor": "33",
+			"type": "packages"
+		},
+		{
+			"key": " ",
+			"keyColor": "33",
+			"type": "shell"
+		},
+		{
+			"key": " ",
+			"keyColor": "33",
+			"type": "terminal"
+		},
+		{
+			"key": " ",
+			"keyColor": "33",
+			"type": "wm"
+		},
+		{
+			"key": " ",
+			"keyColor": "33",
+			"type": "uptime"
+		},
+		{
+			"key": "󰝚 ",
+			"keyColor": "33",
+			"type": "media"
+		},
+		"break",
+		"break"
+	]
+}

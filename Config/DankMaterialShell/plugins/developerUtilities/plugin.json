@@ -1,0 +1,16 @@
+{
+    "id": "developerUtilities",
+    "name": "Developer Utilities",
+    "description": "Encoders, Decoders, Formatters and Converters for Developers",
+    "version": "1.1.0",
+    "author": "xxyangyoulin",
+    "component": "./DeveloperUtilityWidget.qml",
+    "icon": "code",
+    "settings": "./DeveloperUtilitySettings.qml",
+    "requires_dms": ">=1.4.0",
+    "license": "MIT",
+    "permissions": [
+        "settings_read",
+        "settings_write"
+    ]
+}

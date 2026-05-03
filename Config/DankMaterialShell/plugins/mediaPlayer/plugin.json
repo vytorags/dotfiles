@@ -1,0 +1,18 @@
+{
+    "id": "mediaPlayer",
+    "name": "Media Player",
+    "description": "A feature-rich media player widget with MPRIS support, volume control, playlist management, and audio device switching",
+    "version": "1.0.0",
+    "author": "arrifat346afs",
+    "type": "desktop",
+    "capabilities": ["desktop-widget", "media-player", "mpris", "audio-control"],
+    "component": "./MediaPlayerTab.qml",
+    "settings": "./MediaPlayerSettings.qml",
+    "icon": "music_note",
+    "permissions": [
+        "settings_read",
+        "settings_write",
+        "mpris_control",
+        "audio_control"
+    ]
+}
